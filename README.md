@@ -187,6 +187,3 @@ API: https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.h
 código 
 de bloque 
 ~~~
-#   D L C - M o d e l 
- 
- 
