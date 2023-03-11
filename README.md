@@ -1,5 +1,4 @@
 # General
-
 Este documento es una guía de cómo configurar el DeepLabCut (DLC) para entrenamiento de 
 modelos utilizando una o más GPU en Windows 10 u 11 versión 2.3.0.<br>
 Páginas oficiales de DLC:
@@ -188,5 +187,6 @@ API: https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.h
 código 
 de bloque 
 ~~~
-#   D L C - M o d e l  
+#   D L C - M o d e l 
+ 
  
