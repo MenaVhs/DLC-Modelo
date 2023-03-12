@@ -9,8 +9,8 @@
 El proyecto de DLC-Live se encuentra en el directorio: <br>
 ```DLC-Live```
 
-## [Instalación de DLC-Live](https://github.com/DeepLabCut/DeepLabCut-live/blob/master/docs/install_desktop.md?plain=1)
-### Crear entorno virtual en Anaconda para dlc-live (Windows/Ubuntu). <br>
+## [1. Instalación de DLC-Live](https://github.com/DeepLabCut/DeepLabCut-live/blob/master/docs/install_desktop.md?plain=1)
+### Crear entorno virtual en Anaconda para dlc-live (Windows/Ubuntu)<br>
 ~~~
 conda create -n dlc-live python=3.7 tensorflow-gpu==1.13.1 # if using GPU
 conda create -n dlc-live python=3.7 tensorflow==1.13.1 # if not using GPU
@@ -22,13 +22,13 @@ pip install deeplabcut-live
 dlc-live-test
 ~~~
 
-## [Instalación de DLC-Live GUI](https://github.com/DeepLabCut/DeepLabCut-live-GUI/blob/master/docs/install.md?plain=1)
+## [2. Instalación de DLC-Live GUI](https://github.com/DeepLabCut/DeepLabCut-live-GUI/blob/master/docs/install.md?plain=1)
 ~~~
 conda activate dlc-live
 pip install deeplabcut-live-gui
 ~~~
 
-## Corre el deeplabcut-live-gui
+## 3. Corre el deeplabcut-live-gui
 ~~~
 conda activate dlc-live
 dlclivegui
