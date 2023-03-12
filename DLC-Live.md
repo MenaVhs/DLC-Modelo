@@ -10,7 +10,7 @@ El proyecto de DLC-Live se encuentra en el directorio: <br>
 ```DLC-Live```
 
 # [Instalación de DLC-Live](https://github.com/DeepLabCut/DeepLabCut-live/blob/master/docs/install_desktop.md?plain=1)
-## Crear entorno virtual en Anaconda para dlc-live (Windows/Ubuntu). <br>
+### Crear entorno virtual en Anaconda para dlc-live (Windows/Ubuntu). <br>
 ~~~
 conda create -n dlc-live python=3.7 tensorflow-gpu==1.13.1 # if using GPU
 conda create -n dlc-live python=3.7 tensorflow==1.13.1 # if not using GPU
@@ -29,8 +29,10 @@ pip install deeplabcut-live-gui
 ~~~
 
 ## [Instalación de OpenCV, Cmake, VStudio 2019 con VScode ](https://www.youtube.com/watch?v=-GY2gT2umpk&ab_channel=NicolaiNielsen-ComputerVision%26AI)
-en cmd: <br>
-```cmake --build "C:\build" --target INSTALL --config Release```
+Al final de todos los pasos del video, en cmd: <br>
+```cmake --build "C:\build" --target INSTALL --config Release``` <br>
+
+## Tener instalado
 Instalar: <br>
 - Visual Studio 2019
 - Cmake
