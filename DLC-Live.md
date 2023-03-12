@@ -46,3 +46,5 @@ Instalar: <br>
 - OpenCV 4.5.x
 - CUDA 11.2 (si no está instalado)
 - cuDNN (si no está instalado)
+- Arduino: Arduino IDE, Arduino, C/C++, Arduino-Snippets y Arduino de Moozyk
+[Para configutaciones de Arduino en VScode](https://www.youtube.com/watch?v=f7gFt7vDeLw&ab_channel=Proyectosdetecnolog%C3%ADaconarduino)
