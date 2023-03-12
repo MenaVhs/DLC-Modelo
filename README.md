@@ -28,18 +28,17 @@ GPU: NVIDIA GeFore RTX 3060 Ti 16 Gb
 
 ## Instalación
 
-Leer
-https://deeplabcut.github.io/DeepLabCut/docs/installation.html 
+[Leer documento oficial de instalación](https://deeplabcut.github.io/DeepLabCut/docs/installation.html )
 
 Es importante seguir el orden:
 1. Anaconda
-2. Visual Sctudio Code, active el autoguardado
+2. Visual Studio Code, active el autoguardado
     Ver apartado de OPCIONAL si prefiere trabajar con el entorno de DEEPLABCUT desde su VScode<br>
 3. Python (verificar que se genere el PATH)
 2. Git (opcional, si quiere clonar el repositorio sino, sólo con descargar el ZIP)<br>
   2.1. Clonar repositorio de DLC en GitHub
   2.2. Suponiendo que quiere clonar en escritorio, dar click derecho y click en "Abrir Terminal"
-  2.3. escribir: git clone https://github.com/DeepLabCut/DeepLabCut
+  2.3. Escribir: git clone https://github.com/DeepLabCut/DeepLabCut
 3. Abrir el promt de Anaconda como administrador
 4. Para entrar a carpeta de proyecto, copiar la dirección donde se encuentra nuestro proyecto de DLC, por ejemplo:<br>
   ```cd C:\Users\Name\Desktop\DeepLabCut\conda-environments```
