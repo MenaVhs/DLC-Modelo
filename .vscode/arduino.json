@@ -1,6 +1,5 @@
 {
-    "sketch": "DLC-Live\\Processor\\teensy_led\\teensy_led.ino",
     "board": "arduino:avr:uno",
-    "programmer": "avrispmkii",
-    "port": "COM4"
+    "port": "COM3",
+    "programmer": "avrispmkii"
 }
