@@ -1,7 +1,7 @@
 // https://github.com/DeepLabCut/DeepLabCut-live/blob/master/example_processors/MouseLickLED/teensy_leds/teensy_leds.ino
 
 const int LED = 13;
-const int IR = 1;
+const int IR = 8;
 const int REC = 2;
 int frec = 7000;
 
