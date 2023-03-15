@@ -53,19 +53,28 @@ class MouseLickLED(Processor):
     def process(self, pose, **kwargs):
 
         ### bodyparts
-        # 0. pupil-top
-        # 1. pupil-left
-        # 2. pupil-bottom
-        # 3. pupil-right
-        # 4. lip-upper
-        # 5. lip-lower
-        # 6. tongue
-        # 7. tube
-
-        if kwargs["record"]:
-            if pose[16, 2] > self.lik_thresh:
-                self.lick_frame_time.append(kwargs["frame_time"])
-                self.switch_led()
+        # 0 Head
+        # 1 Snout
+        # 2 LeftEar
+        # 3 RightEar
+        # 4 Shoulder
+        # 5 Spine1
+        # 6 Spine2
+        # 7 Spine3
+        # 8 Spine4
+        # 9 TailBase
+        # 10 Tail1
+        # 11 Tail2
+        # 12 TailEnd
+        # 13 LeftPaw1
+        # 14 RightPaw1
+        # 15 LeftPaw2
+        # 16 RightPaw2
+        # if kwargs["record"]: 
+            # if pose[8, 5] > self.lik_thresh:
+            #     self.lick_frame_time.append(kwargs["frame_time"])
+            #     self.switch_led()
+        self.switch_led()
 
         return pose
 
@@ -86,3 +95,18 @@ class MouseLickLED(Processor):
             save_code = False
 
         return save_code
+    
+
+'''
+    Este código importa los módulos necesarios y define una clase MouseLickLED que hereda de la clase Processor del módulo dlclive. 
+    La clase se inicializa con los siguientes argumentos: com, que especifica el puerto serial al que está conectado el dispositivo; 
+    lik_thresh, que es el umbral de probabilidad para detectar un "lamido" de ratón; y baudrate, que es la velocidad de transmisión de datos a través del puerto serial.
+    La clase tiene varios métodos. 
+    El método close_serial se utiliza para cerrar el puerto serial. 
+    El método switch_led es el que activa un LED infrarrojo y espera a que el receptor detecte su señal. 
+    El método process toma como entrada una matriz pose que contiene información sobre la postura de un animal (en este caso, un ratón) y un diccionario
+      kwargs que contiene información adicional. Si record es verdadero en kwargs y la probabilidad de que el animal haya lamido (pose[16,2]) es mayor que el umbral especificado 
+      (self.lik_thresh), 
+    entonces el método llama a self.switch_led() y registra el tiempo de fotograma en el que se activó el LED. 
+    El método devuelve la matriz pose. El método save se utiliza para guardar los tiempos de activación del LED y los tiempos de fotograma en un archivo numpy con extensión .npy.
+'''
