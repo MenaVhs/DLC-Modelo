@@ -44,8 +44,8 @@ Es importante seguir el orden:
   ```cd C:\Users\Name\Desktop\DeepLabCut\conda-environments```
 5. Para crear el entorno virtual de DEEPLABCUT, pegar:<br>
   ```conda env create -f DEEPLABCUT.yaml```
-6. Instalar Tensorflow dentro de entorno virtual DEEPLABCUT: <br>  
-  ```pip install tensorflow = 2.10.0``` 
+6. Instalar Tensorflow dentro de entorno virtual DEEPLABCUT: 
+  ```pip install tensorflow = 2.10.0```  <br> 
   **IMPORTANTE** Si quiere instalar otra versión de tensorflow, ver [compatibilidad](https://www.tensorflow.org/install/source?hl=es-419#gpu )  
 7. Instalar Tensorflow-gpu
   ```pip install tensorflow-gpu = 2.10.0```

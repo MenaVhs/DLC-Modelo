@@ -23,7 +23,7 @@ dlc-live-test
 ~~~
 
 ## [2. Instalación de DLC-Live GUI](https://github.com/DeepLabCut/DeepLabCut-live-GUI/blob/master/docs/install.md?plain=1)
-~~~
+~~~ 
 conda activate dlc-live
 pip install deeplabcut-live-gui
 ~~~
