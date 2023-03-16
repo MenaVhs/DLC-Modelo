@@ -50,10 +50,10 @@ Es importante seguir el orden:
 7. Instalar Tensorflow-gpu
   ```pip install tensorflow-gpu = 2.10.0```
 8. Instalar Drivers de acuerdo a la GPU instalada. <br>  Importante, leer instrucciones de DLC sobre la GPU<br>
-   Para saber el modelo de GPU
-   a) CTRL + r
-   b) escribir: dxdiag
-   c) segunda pestaña, en español "Pantalla"
+   Para saber el modelo de GPU<br> 
+   a) CTRL + r<br> 
+   b) escribir: dxdiag<br> 
+   c) segunda pestaña, en español "Pantalla"<br> 
    Si es NVIDIA: https://www.nvidia.com/download/index.aspx 
 9. Instalación de CUDA 11.2: https://developer.nvidia.com/cuda-11.2.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal 
 10. Para descargar cuDNN 8.1 debe tener cuenta de NVIDIA: https://developer.nvidia.com/rdp/cudnn-archive 
@@ -113,6 +113,7 @@ Si ya tiene un proyecto generado:
    ```File > Save Selected Layer(s)...```
 
 ### Dataset
+ImgAug es muy popular en la comunidad de aprendizaje profundo para el aumento de datos de imágenes y proporciona una amplia variedad de transformaciones de imagen. Además, ImgAug tiene un código eficiente para la creación de mapas de objetivos y soporta lotes de tamaños mayores que 1, lo que permitirá procesar datos de manera más eficiente. 
 1. Dar click en "Create training dataset"
 2. Configurar los parámentros (Ojo, estos deben coincidir con los datos de entrenamiento)
 3. Click en "Create training dataset" para crear
@@ -137,10 +138,21 @@ Información de la API https://deeplabcut.github.io/DeepLabCut/docs/standardDeep
 4. Al finalizar el entrenamiento se generarán los archivos snapshots. 
 
 ## Exportar el modelo entrenado
-### (el último)
+### Checkpoint: 228600 con con Loss: 0.0018 y lr: 0.02
+Para saber cuál fue la mejor iteración se tuvo que investigar el valor de Loss más pequeño dentro del archivo ```learning_stats.csv```
+
+<!-- D:\DLC\CV-Mena-2023-02-26\dlc-models\iteration-0\CVFeb26-trainset95shuffle1\train  -->
+
 Esta función permite exportar un modelo animal único bien entrenado para aplicaciones en tiempo real, etc. Esta función es parte de Kane et al, 2020 eLife.<br>
 
-```deeplabcut.export_model(config_path, iteration=None, shuffle=1, trainingsetindex=0,snapshotindex='all', TFGPUinference=True, overwrite=False, make_tar=True)```<br>
+~~~
+deeplabcut.export_model(config_path, iteration=None, shuffle=1, trainingsetindex=0,snapshotindex='all', TFGPUinference=True, overwrite=False, make_tar=True)
+~~~<br>
+
+Para exportar el modelo con mejor precisión, se eliminaron del valor 2
+~~~
+deeplabcut.export_model(config_path, iteration=0, shuffle=1, trainingsetindex=0, snapshotindex='all', TFGPUinference=True, overwrite=True, make_tar=True)
+~~~<br>
 Información: https://deeplabcut.github.io/DeepLabCut/docs/HelperFunctions.html?highlight=export_model 
 
 ## Evaluar la red entrenada
