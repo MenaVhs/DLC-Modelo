@@ -4,6 +4,8 @@
 *PC-GAMER
 *MENA
 
+# Iteración 0
+
 dlc-models/iteration-0/CVFeb26-trainset95shuffle1/train/*
 !dlc-models/iteration-0/CVFeb26-trainset95shuffle1/train/log/
 !dlc-models/iteration-0/CVFeb26-trainset95shuffle1/train/checkpoint
@@ -13,6 +15,19 @@ dlc-models/iteration-0/CVFeb26-trainset95shuffle1/train/*
 
 evaluation-results/iteration-0/CVFeb26-trainset95shuffle1/*
 !evaluation-results/iteration-0/CVFeb26-trainset95shuffle1/DLC_resnet50_CVFeb26shuffle1_232600-results.csv
-!evaluation-results\iteration-0\CombinedEvaluation-results.CSV
+!evaluation-results/iteration-0/CombinedEvaluation-results.CSV
+
+# Iteración 1
+dlc-models/iteration-1/CVFeb26-trainset95shuffle1/train/*
+!dlc-models/iteration-1/CVFeb26-trainset95shuffle1/train/log/
+!dlc-models/iteration-1/CVFeb26-trainset95shuffle1/train/checkpoint
+!dlc-models/iteration-1/CVFeb26-trainset95shuffle1/train/learning_stats.csv
+!dlc-models/iteration-1/CVFeb26-trainset95shuffle1/train/log.txt
+!dlc-models/iteration-1CVFeb26-traingit add README.mdset95shuffle1/train/pose_cfg.yaml
+
+evaluation-results/iteration-1/CVFeb26-trainset95shuffle1/*
+!evaluation-results/iteration-1/CVFeb26-trainset95shuffle1/DLC_resnet50_CVFeb26shuffle1_232600-results.csv
+!evaluation-results/iteration-1/CombinedEvaluation-results.CSV
 
 exported-models/*
+

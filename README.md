@@ -123,6 +123,7 @@ ImgAug es muy popular en la comunidad de aprendizaje profundo para el aumento de
 2. Cambie el número de la iteracipon en la opción "iteration"
 3. Repita el paso del dataset
 4. Revise si se generó otra carpata llamada **iteration <<número de la iteración nueva>>**
+En el caso de este proyecto, si quiere saber más información de las otras iteraciones realizadas, revise los archivos .md dentro del directorio *Docs*.
 
 
 ## Entrenamiento del modelo
@@ -132,11 +133,16 @@ En el caso de este proyecto, se configuró dentro del entorno virtual del promt 
 
 1. Guarde la ruta de su proyecto en una variable, por ejemplo:
 ```config_path = 'C:\Users\Name\Desktop\Proyecto-Mena-2023-02-26\config.yaml' ```
-2. ```import deeplabcut```
+2. En terminal: ```import deeplabcut```
 3. ```deeplabcut.train_network(config_path, shuffle=1, trainingsetindex=0, gputouse=0, max_snapshots_to_keep=200000, autotune=False, displayiters=100, saveiters=100, maxiters=200000, allow_growth=True)```<br>
 Información de la API https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html#g-train-the-network 
 4. Al finalizar el entrenamiento se generarán los archivos snapshots. 
 
+Si se debe parar el modelo por alguna razón, puede continuar entrenando en el checkpoint donde se quedó configurando en el archivo ```pose_cfg.yaml```.<br>
+```init_weights: '<full_path>-snapshot-XXXXX' ``` Sin ningun tipo de archivo al final.<br>
+ XXXXX número de la última iteración guardada.<br>
+Ejemplo:
+init_weights: 'D:\DLC\CV-Mena-2023-02-26\dlc-models\iteration-0\CVFeb26-trainset95shuffle1\train\snapshot-205000'
 ## Exportar el modelo entrenado
 ### Checkpoint: 228600 con con Loss: 0.0018 y lr: 0.02
 Para saber cuál fue la mejor iteración se tuvo que investigar el valor de Loss más pequeño dentro del archivo ```learning_stats.csv```
