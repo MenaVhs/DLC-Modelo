@@ -11,7 +11,7 @@ Fecha de creación 26/Febrero/2023<br>
 Autor: Mena
 
 
-## Versiones y hardware utilizados para el presente proyeto
+## Versiones y hardware utilizados para el presente proyecto
 
 1. DLC: 2.3.0
 2. Tensorflow = 2.10.0
@@ -157,8 +157,7 @@ deeplabcut.export_model(config_path, iteration=None, shuffle=1, trainingsetindex
 
 Para exportar el modelo con mejor precisión, se eliminaron del valor 2
 ~~~
-deeplabcut.export_model(config_path, iteration=0, shuffle=1, trainingsetindex=0, snapshotindex='all', TFGPUinference=True, overwrite=True, make_tar=True)
-~~~<br>
+deeplabcut.export_model(config_path, iteration=0, shuffle=1, trainingsetindex=0, snapshotindex='all', TFGPUinference=True, overwrite=True, make_tar=True)<br>
 Información: https://deeplabcut.github.io/DeepLabCut/docs/HelperFunctions.html?highlight=export_model 
 
 ## Evaluar la red entrenada
@@ -191,6 +190,8 @@ Más información: https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabC
 
 ## Filtrado
 ```deeplabcut.filterpredictions(config_path, video_path, shuffle=1, trainingsetindex=0, filtertype='arima', p_bound=0.01, ARdegree=3, MAdegree=1, alpha=0.01)```
+<!-- plot_trajectories(config, videos, videotype, shuffle, trainingsetindex, filtered, displayedbodyparts, displayedindividuals, showfigures, destfolder, modelprefix, imagetype, resolution, linewidth, track_method) -->
+
 API: https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html?highlight=plot#j-filter-pose-data-data-recommended <br>
 
 ## Gráficar 

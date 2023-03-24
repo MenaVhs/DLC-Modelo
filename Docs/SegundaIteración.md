@@ -26,21 +26,54 @@ A las 3:41 P.M. terminó en 205000<br>
 <!-- 
 Se continuó a las 3:55 P.M. con 
 init_weights: 'D:\DLC\CV-Mena-2023-02-26\dlc-models\iteration-1\CVFeb26-trainset95shuffle1\train\snapshot-205000' 
-Se detivo a las 4:49 P.M hasta la iteración 251000-->
+Se detuvo a las 4:49 P.M hasta la iteración 251000-->
 
 La iteración con menor pérdida fue: <br>
 Iter: 213000, Loss: 0.179%, Learning Rate: 0.5%, precisión del: 99.821%
 
 
 ### Exportar modelo
-
-deeplabcut.export_model(config_path, iteration=1, shuffle=1, trainingsetindex=0, snapshotindex='all', TFGPUinference=True, overwrite=True, make_tar=True)
+```deeplabcut.export_model(config_path, iteration=1, shuffle=1, trainingsetindex=0, snapshotindex='all', TFGPUinference=True, overwrite=True, make_tar=True)```
 'D:\DLC\CV-Mena-2023-02-26\dlc-models\iteration-1\CVFeb26-trainset95shuffle1\train'
 ### Evaluación
 
 Es importante evaluar el rendimiento de la red entrenada. Este rendimiento se mide calculando el error euclidiano medio (MAE; que es proporcional al error cuadrático medio medio) entre las etiquetas manuales y las predichas por DeepLabCut. El MAE se guarda en un archivo separado por comas y se muestra para todos los pares y sólo para los pares probables (>p-cutoff). Esto ayuda a excluir, por ejemplo, partes del cuerpo ocluidas. Uno de los puntos fuertes de DeepLabCut es que, debido a la salida probabilística del mapa de puntuación, puede, si está suficientemente entrenado, informar también de forma fiable si una parte del cuerpo es visible en un fotograma determinado. (véanse las discusiones sobre las puntas de los dedos al alcanzar y las patas de Drosophila durante el comportamiento 3D en [Mathis et al, 2018]). <br>
 Los resultados de la evaluación se computan tecleando: <br>
 ```deeplabcut.evaluate_network(config_path,Shuffles=[1], plotting=True, gputouse=0, trainingsetindex='all')```
-deeplabcut.evaluate_network(config_path,Shuffles=[1], plotting=True)
+
+## Análsis de video externos
+### Novel Video Analysis
+```deeplabcut.analyze_videos(config_path, video_path, videotype='mp4', shuffle=1, trainingsetindex=0, gputouse=0, save_as_csv=True, dynamic=(True, .5, 10))```
 
 
+### Filter pose data data
+```deeplabcut.filterpredictions(config_path, video_path, shuffle=1, trainingsetindex=0, filtertype='arima', p_bound=0.01, ARdegree=3, MAdegree=1, alpha=0.01)```
+
+### Labeled Video
+```deeplabcut.create_labeled_video(config_path, video_path, videotype='.mp4', trailpoints=10, save_frames = True, filtered=True)```
+Etiquedato: 23/03/2023 <br>
+    inicio: 10:35 p.m.
+    Fin: 12:01 p.m<br>
+<!-- 
+gráfica MX450
+video_path = ['D:\DLC\VideosParaTracking\grupo 2\R4\Pruebas\Grupo2R4S15\MX450\iteración-1\Grupo2R4S15TRIM.mp4'] 
+
+gráfica 3060 Ti <br>
+video_path =  ['D:\DLC\VideosParaTracking\grupo 2\R4\Pruebas\Grupo2R4S15\3060Ti\iteración-1\Grupo2R4S15TRIM.mp4'] Video de 2.52 min
+ 24/03/23
+Análisis:
+    inicio: 12:03 p.m.
+    Fin: 12:04 p.m
+
+Filtrado: 
+    inicio: 12:04 p.m.
+    Fin: 12:05 p.m
+
+Etiquetado de video: 
+    inicio: 12:10 p.m.
+    Fin: 12: p.m
+-->
+
+### Extraer funciones esqueleto
+Puede guardar el "esqueleto" que se aplicó en create_labeled_videos para realizar más cálculos. En concreto, extrae la longitud y orientación de cada "hueso" del esqueleto tal y como se define en el archivo config.yaml. 
+```deeplabcut.analyzeskeleton(config, video_path, videotype='mp4', shuffle=1, trainingsetindex=0, save_as_csv=True, destfolder=None, filtered=True)```
