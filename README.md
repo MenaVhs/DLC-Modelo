@@ -153,7 +153,7 @@ Esta función permite exportar un modelo animal único bien entrenado para aplic
 
 ~~~
 deeplabcut.export_model(config_path, iteration=None, shuffle=1, trainingsetindex=0,snapshotindex='all', TFGPUinference=True, overwrite=False, make_tar=True)
-~~~<br>
+~~~
 
 Para exportar el modelo con mejor precisión, se eliminaron del valor 2
 ~~~
@@ -197,8 +197,3 @@ API: https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.h
 ## Gráficar 
 ```deeplabcut.plot_trajectories(config_path, video_path,  videotype='mp4', shuffle=1)```
 API: https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html?highlight=plot#k-plot-trajectories
-
-~~~
-código 
-de bloque 
-~~~
