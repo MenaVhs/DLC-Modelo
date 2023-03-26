@@ -158,6 +158,7 @@ deeplabcut.export_model(config_path, iteration=None, shuffle=1, trainingsetindex
 Para exportar el modelo con mejor precisión, se eliminaron del valor 2
 ~~~
 deeplabcut.export_model(config_path, iteration=0, shuffle=1, trainingsetindex=0, snapshotindex='all', TFGPUinference=True, overwrite=True, make_tar=True)<br>
+~~~
 Información: https://deeplabcut.github.io/DeepLabCut/docs/HelperFunctions.html?highlight=export_model 
 
 ## Evaluar la red entrenada
