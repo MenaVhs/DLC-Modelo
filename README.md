@@ -24,7 +24,7 @@ Autor: Mena
 9. Sistema operativo: Windows 11
 
 Hardware:<br>
-GPU: NVIDIA GeFore RTX 3060 Ti 16 Gb
+GPU: NVIDIA GeFore RTX 3060 Ti 8 Gb
 
 ## Instalación
 
