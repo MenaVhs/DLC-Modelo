@@ -42,7 +42,9 @@ Es importante seguir el orden:
 3. Abrir el promt de Anaconda como administrador
 4. Para entrar a carpeta de proyecto, copiar la dirección donde se encuentra nuestro proyecto de DLC, por ejemplo:<br>
   ```cd C:\Users\Name\Desktop\DeepLabCut\conda-environments```
-5. Para crear el entorno virtual de DEEPLABCUT, pegar:<br>
+5.1. Si es una versión 2.3.3 o superiror, ingrese el siguiente comando:
+ ```pip install 'deeplabcut[gui,tf]'``` que tiene una GUI basada en pyside/napari. <br>
+5.2. Para crear el entorno virtual de DEEPLABCUT, pegar:<br>
   ```conda env create -f DEEPLABCUT.yaml```
 6. Instalar Tensorflow dentro de entorno virtual DEEPLABCUT: 
   ```pip install tensorflow = 2.10.0```  <br> 
