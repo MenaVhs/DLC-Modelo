@@ -53,7 +53,7 @@ Es importante seguir el orden:
   ```pip install tensorflow-gpu = 2.10.0```
 8. Instalar Drivers de acuerdo a la GPU instalada. <br>  Importante, leer instrucciones de DLC sobre la GPU<br>
    Para saber el modelo de GPU<br> 
-   a) CTRL + r<br> 
+   a) Windows + r<br> 
    b) escribir: dxdiag<br> 
    c) segunda pestaña, en español "Pantalla"<br> 
    Si es NVIDIA: https://www.nvidia.com/download/index.aspx 
